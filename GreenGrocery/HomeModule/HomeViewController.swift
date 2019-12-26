@@ -8,24 +8,21 @@
 
 import UIKit
 
-protocol HomeView: class {
-    func updateTitle(title: String) -> (())
-}
-
 class HomeViewController: UIViewController {
-
-    @IBOutlet weak var helloLabel: UILabel!
     
-    var presenter: HomePresentation!
+    @IBOutlet weak var containerStackView: UIStackView!
+    
+    lazy var addBagControl: AddBagControl = {
+        let control = AddBagControl.loadFromNib()
+        let viewModel = AddBagViewModel(title: "ADD TO BAG", stepValue: 0)
+        control.configure(using: viewModel) { stepValue in
+            print("Current step value: \(stepValue)")
+        }
+        return control
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter.viewDidLoad()
-    }
-}
-
-extension HomeViewController: HomeView {
-    func updateTitle(title: String) {
-        helloLabel.text = title
+        self.containerStackView.addArrangedSubview(addBagControl)
     }
 }
