@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="GroceryItemCell" customModule="GreenGrocery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pna-0m-hyC">
+                        <rect key="frame" x="15" y="27.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Xf7-kk-hZz"/>
+                            <constraint firstAttribute="height" constant="50" id="fPc-6C-3xj"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lP5-L4-mUk">
+                        <rect key="frame" x="80" y="23" width="231" height="59"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xsJ-Sf-O9d">
+                                <rect key="frame" x="0.0" y="0.0" width="231" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toor Daal - 1 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmG-XY-fjj">
+                                        <rect key="frame" x="0.0" y="0.0" width="231" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="231" id="SbA-hH-Bca"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" red="0.0036987930070000001" green="0.28520381449999999" blue="0.50711029770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best quality toor daal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgO-ej-8fc">
+                                        <rect key="frame" x="0.0" y="19.5" width="231" height="14.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="231" id="eaM-P4-1hh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csc-ut-a0F">
+                                <rect key="frame" x="0.0" y="38" width="231" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHL-Lu-sbZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Jhh-cZ-xNB"/>
+                                            <constraint firstAttribute="height" constant="21" id="vAK-WJ-b6x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Upu-Sc-pzW">
+                                        <rect key="frame" x="60" y="0.0" width="91" height="21"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmg-VK-AkN" customClass="AddBagControl" customModule="GreenGrocery" customModuleProvider="target">
+                                        <rect key="frame" x="151" y="0.0" width="80" height="21"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="kHV-qM-7Eg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lP5-L4-mUk" firstAttribute="leading" secondItem="pna-0m-hyC" secondAttribute="trailing" constant="15" id="MeN-YR-5YK"/>
+                    <constraint firstItem="pna-0m-hyC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="eLV-HZ-p6L"/>
+                    <constraint firstItem="pna-0m-hyC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ec5-xT-ieI"/>
+                    <constraint firstAttribute="trailing" secondItem="lP5-L4-mUk" secondAttribute="trailing" constant="9" id="r9i-is-Hfv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="lP5-L4-mUk" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="ZNN-gI-Scp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailsLabel" destination="NgO-ej-8fc" id="JIf-o1-RHy"/>
+                <outlet property="priceLabel" destination="wHL-Lu-sbZ" id="NsS-Sg-jJ6"/>
+                <outlet property="productImageView" destination="pna-0m-hyC" id="QJk-z2-7tB"/>
+                <outlet property="titleLabel" destination="pmG-XY-fjj" id="J4d-lo-4Ck"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="181.25937031484258"/>
+        </tableViewCell>
+    </objects>
+</document>
+

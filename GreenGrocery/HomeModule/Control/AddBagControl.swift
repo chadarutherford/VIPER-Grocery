@@ -11,17 +11,14 @@ import UIKit
 class AddBagControl: UIControl, ViewLoadable {
     
     static var nibName: String = "AddBagControl"
-    typealias BagClosure = (Int) -> ()
-    var closure: BagClosure?
     
     var viewModel: AddBagViewModel! {
         didSet {
-            let isHidden = viewModel.showStepper
-            addButton.isHidden = isHidden
-            plusButton.isHidden = !isHidden
-            minusButton.isHidden = !isHidden
-            stepLabel.isHidden = !isHidden
             stepLabel.text = "\(viewModel.stepValue)"
+            addButton.isHidden = (viewModel.showStepper)
+            plusButton.isHidden = !(viewModel.showStepper)
+            minusButton.isHidden = !(viewModel.showStepper)
+            stepLabel.isHidden = !(viewModel.showStepper)
         }
     }
     
@@ -32,22 +29,17 @@ class AddBagControl: UIControl, ViewLoadable {
     
     @IBAction func addToBag(_ sender: Any) {
         self.viewModel = self.viewModel.onAddToBag()
-        self.closure?(self.viewModel.stepValue)
     }
     
     @IBAction func incrementButton(_ sender: Any) {
-        self.viewModel = self.viewModel.onIncrement()
-        self.closure?(self.viewModel.stepValue)
-    }
+        self.viewModel = self.viewModel.onIncrement()    }
     
     @IBAction func decrementButton(_ sender: Any) {
         self.viewModel = self.viewModel.onDecrement()
-        self.closure?(self.viewModel.stepValue)
     }
     
-    func configure(using viewModel: AddBagViewModel, addToBag: @escaping BagClosure) {
+    func configure(using viewModel: AddBagViewModel) {
         self.viewModel = viewModel
         self.addButton.setTitle(viewModel.title, for: .normal)
-        self.closure = addToBag
     }
 }
